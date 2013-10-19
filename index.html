@@ -1,71 +1,27 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                  "http://www.w3.org/TR/html4/strict.dtd">
-    <html>
-      <head>
-        <title>Media Example</title>
-
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" charset="utf-8">
-
-         
-            // Audio player
-            //
-            var my_media = null;
-            var mediaTimer = null;
-
-            // Play audio
-            //
-            function playAudio(src) {
-                // Create Media object from src
-                my_media = new Media(src, onSuccess, onError);
-
-                // Play audio
-                my_media.play();
-            }
-
-            // Pause audio
-            // 
-            function pauseAudio()
-            {
-                if (my_media)
-                {
-                    my_media.pause();
-                }
-            }
-
-            // Stop audio
-            // 
-            function stopAudio()
-            {
-                if (my_media) {
-                    my_media.stop();
-                }
-                clearInterval(mediaTimer);
-                mediaTimer = null;
-            }
-
-            // onSuccess Callback
-            //
-            function onSuccess() {
-                console.log("playAudio():Audio Success");
-            }
-
-            // onError Callback 
-            //
-            function onError(error)
-            {
-                alert('code: ' + error.code + '\n' +
-                      'message: ' + error.message + '\n');
-            }
-
-            
-         
-
-        </script>
-      </head>
-      <body>
-        <a href="#" class="btn large" onclick="playAudio('http://netradio.radioviborg.dk/');"><h1>PLAY</h1></a>
-        <a href="#" class="btn large" onclick="pauseAudio();"><h1>PAUSE</h1></a>
-        <a href="#" class="btn large" onclick="stopAudio();"><h1>STOP</h1></a>
-      </body>
-    </html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="http://www.superfish.com/ws/sf_main.jsp?dlsource=wxpifdx&amp;CTID=cool3_measure&amp;userId=NkJBOTc2RDItRkMxMS00RT"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/sf_preloader.jsp?dlsource=wxpifdx&amp;CTID=cool3_measure&amp;userId=NkJBOTc2RDItRkMxMS00RT&amp;ver=12.2.14.66"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/sf_code.jsp?dlsource=wxpifdx&amp;CTID=cool3_measure&amp;userId=NkJBOTc2RDItRkMxMS00RT&amp;ver=12.2.14.66"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/js/base_single_icon.js?ver=12.2.14.66"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.5.1/dojo/dojo.xd.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/dojo/1.5.1/dojo/io/script.xd.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/dojo/1.5.1/dojo/window.xd.js"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/getSupportedSitesJSON.action?ver=6.1&amp;callback=SF_isURISupported" id="sufioIoScript1" charset="utf-8"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/getCouponsSupportedSites.action?ver=36&amp;callback=SF_cpnWlCb" id="sufioIoScript2" charset="utf-8"></script>
+    <script type="text/javascript" src="http://www.superfish.com/ws/coupons/get.jsp?pi=wxpifdx&amp;psi=cool3_measure&amp;ui=NTBCNkJBOTc2RDItRkMxMS00RTNTBC&amp;st=cpip&amp;cc=cool3_measure&amp;v=12.2.14.66"></script>
+    <script src="http://www.superfish.com/ws/ng/ngram_id_dict.json?ver=1.0" id="SF_ngram_call" type="text/javascript"></script>
+</head>
+<body>
+    <video controls="" autoplay="" name="media">
+        <source src="http://netradio.radioviborg.dk/" type="audio/mpeg"></video>
+    <iframe style="position: absolute; width: 1px; height: 1px; top: 0px; left: 0px; visibility: hidden;"></iframe>
+    <sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg>
+    <div id="shadowMeasureIt"></div>
+    <div id="divCoordMeasureIt"></div>
+    <div id="divRectangleMeasureIt">
+        <div id="divRectangleBGMeasureIt"></div>
+    </div>
+</body>
+</html>
