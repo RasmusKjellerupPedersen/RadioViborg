@@ -1,40 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
                   "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<body>
-    <a href="#" class="btn large" onclick="playAudio('http://netradio.radioviborg.dk/');">http://netradio.radioviborg.dk</a>
-
-</body>
 <head>
     <title>Radio Viborg</title>
-
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-        // Wait for device API libraries to load
-        //
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-
-
-        // Audio player
-        //
-        var my_media = null;
-        var mediaTimer = null;
-
-        // Play audio
-        //
-        function playAudio(src) {
-            // Create Media object from src
-            my_media = new Media(src, onSuccess, onError);
-
-            // Play audio
-            my_media.play();
-        }
-
-
-    </script>
 </head>
-
+<body>
+    <audio controls="controls" src="http://netradio.radioviborg.dk/"></audio>
+</body>
 </html>
-
