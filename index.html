@@ -1,14 +1,44 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-</head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <body>
-    <table style="margin-left: auto; margin-right:auto">
-        <tr>
-            <td>
-                <iframe scrolling="no" height="296px" width="270px" src="http://netradio.radioviborg.dk/player/"></iframe>
-            </td>
-        </tr>
-    </table>
+    <a href="#" class="btn large" onclick="playAudio('http://listenlive.eu/dk_radioviborg.m3u');">Play Audio</a>
+
 </body>
+<head>
+    <title>Radio Viborg</title>
+
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for device API libraries to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // device APIs are available
+        //
+        function onDeviceReady() {
+            playAudio("http://listenlive.eu/dk_radioviborg.m3u");
+        }
+
+        // Audio player
+        //
+        var my_media = null;
+        var mediaTimer = null;
+
+        // Play audio
+        //
+        function playAudio(src) {
+            // Create Media object from src
+            my_media = new Media(src, onSuccess, onError);
+
+            // Play audio
+            my_media.play();
+        }
+
+
+    </script>
+</head>
+
 </html>
+
